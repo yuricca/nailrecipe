@@ -1,24 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テーブル設計
 
-Things you may want to cover:
+## users テーブル
 
-* Ruby version
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| profile            | text   |                           |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-* System dependencies
+### Association
 
-* Configuration
+has_many :nails
+has_many :comments
 
-* Database creation
 
-* Database initialization
+## nails テーブル
 
-* How to run the test suite
+| Column        | Type       | Options           |
+| ------------- | ------ --- | ----------------- |
+| title         | string     | null: false       |
+| detail        | text       |                   |
+| thumb         | text       | null: false       |
+| index_finger  | text       | null: false       |
+| middle_finger | text       | null: false       |
+| ring_finger   | text       | null: false       |
+| little_finger | text       | null: false       |
+| user          | references | foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
+belongs_to :user
+has_one :comments
 
-* ...
+
+## comments テーブル
+
+| Column       | Type       | Options           |
+| ------------ | ---------- | ----------------- |
+| comment_text | string     | null: false       |
+| nail         | references | foreign_key: true |
+| user         | references | foreign_key: true |
+
+### Association
+
+belongs_to :nail
+belongs_to :user
