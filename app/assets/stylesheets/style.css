@@ -17,7 +17,7 @@ div {
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
+  color: #4A4A4A;
 }
 
 li {
@@ -31,13 +31,13 @@ img {
 
 a {
   text-decoration: none;
-  color: #3b4043;
+  color: #4A4A4A;
 }
 
 /* ヘッダー */
 
 .header {
-  background-color: #ffc0cb;
+  background-color: #ffdbf4;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -58,23 +58,23 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #997379;
+  color: #4A4A4A;
   text-decoration: none;
   user-select: none;
-  border: 1px #997379 solid;
+  border: 1px #4A4A4A solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #997379;
+  background: #4A4A4A;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #997379;
+  color: #4A4A4A;
   text-decoration: none;
   user-select: none;
 }
@@ -106,8 +106,8 @@ a {
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #997379;
-  border: 1px #997379 solid;
+  background: #4A4A4A;
+  border: 1px #4A4A4A solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
