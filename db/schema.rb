@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_24_122952) do
+ActiveRecord::Schema.define(version: 2021_10_27_124843) do
+
+  create_table "nails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "detail"
+    t.text "thumb", null: false
+    t.text "index_finger", null: false
+    t.text "middle_finger", null: false
+    t.text "ring_finger", null: false
+    t.text "little_finger", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_nails_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
@@ -26,4 +40,5 @@ ActiveRecord::Schema.define(version: 2021_10_24_122952) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "nails", "users"
 end
