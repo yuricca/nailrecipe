@@ -1,8 +1,8 @@
 <%= form_with model: @nail, local: true do |f|%>
 
   <div class="field">
-    <%= f.label :image, "ネイルデザインの画像" %><br />
-    <%= f.file_field :image, id:"nail_image" %>
+    <%= f.label :image_all, "ネイルデザインの画像" %><br />
+    <%= f.file_field :image_all, id:"nail_image" %>
   </div>
 
 
@@ -15,6 +15,7 @@
     <%= f.label :detail, "デザインの詳細" %><br />
     <%= f.text_area :detail, class: :form__text, id:"nail_detail" %>
   </div>
+  <br />
 
   <div class="field">
     <%= f.label :thumb, "親指" %><br />
