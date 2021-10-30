@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_10_27_131850) do
   create_table "nails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "detail"
+    t.text "item", null: false
     t.text "thumb", null: false
     t.text "index_finger", null: false
     t.text "middle_finger", null: false

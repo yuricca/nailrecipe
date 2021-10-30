@@ -17,28 +17,34 @@
   </div>
   <br />
 
+    <div class="field">
+    <%= f.label :item, "使用したアイテム" %><br />
+    <%= f.text_area :item, class: :form__text, id:"nail_item" %>
+  </div>
+  <br />
+
   <div class="field">
-    <%= f.label :thumb, "親指" %><br />
+    <%= f.label :thumb, "①親指" %><br />
     <%= f.text_area :thumb, class: :form__text, id:"nail_thumb" %>
   </div>
 
   <div class="field">
-    <%= f.label :index_finger, "人差し指" %><br />
+    <%= f.label :index_finger, "②人差し指" %><br />
     <%= f.text_area :index_finger, class: :form__text, id:"nail_index_finger" %>
   </div>
 
   <div class="field">
-    <%= f.label :middle_finger, "中指" %><br />
+    <%= f.label :middle_finger, "③中指" %><br />
     <%= f.text_area :middle_finger, class: :form__text, id:"nail_middle_finger" %>
   </div>
 
   <div class="field">
-    <%= f.label :ring_finger, "薬指" %><br />
+    <%= f.label :ring_finger, "④薬指" %><br />
     <%= f.text_area :ring_finger, class: :form__text, id:"nail_ring_finger" %>
   </div>
 
   <div class="field">
-    <%= f.label :little_finger, "小指" %><br />
+    <%= f.label :little_finger, "⑤小指" %><br />
     <%= f.text_area :little_finger, class: :form__text, id:"nail_little_finger" %>
   </div>
 

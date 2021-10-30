@@ -3,6 +3,7 @@ class CreateNails < ActiveRecord::Migration[6.0]
     create_table :nails do |t|
       t.string     :title,         null: false
       t.text       :detail
+      t.text       :item,          null: false
       t.text       :thumb,         null: false
       t.text       :index_finger,  null: false
       t.text       :middle_finger, null: false
