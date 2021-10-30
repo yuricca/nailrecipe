@@ -2,7 +2,7 @@ class NailsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @nails = Nail.all.order('create_at DESC')
+    @nails = Nail.all
   end
 
   def new
