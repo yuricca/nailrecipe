@@ -23,6 +23,7 @@ has_many :comments
 | ------------- | ------ --- | ----------------- |
 | title         | string     | null: false       |
 | detail        | text       |                   |
+| item          | text       |                   |
 | thumb         | text       | null: false       |
 | index_finger  | text       | null: false       |
 | middle_finger | text       | null: false       |

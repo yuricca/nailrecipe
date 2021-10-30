@@ -1,25 +1,54 @@
-<%= form_with model: モデル名, local: true do |f|%>
+<%= form_with model: @nail, local: true do |f|%>
+
   <div class="field">
-    <%= f.label :hoge, "プロトタイプの名称" %><br />
-    <%= f.text_field :hoge, id:"prototype_title" %>
+    <%= f.label :image, "ネイルデザインの画像" %><br />
+    <%= f.file_field :image, id:"nail_image" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title, id:"nail_title" %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "キャッチコピー" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_catch_copy" %>
+    <%= f.label :detail, "デザインの詳細" %><br />
+    <%= f.text_area :detail, class: :form__text, id:"nail_detail" %>
+  </div>
+  <br />
+
+    <div class="field">
+    <%= f.label :item, "使用したアイテム" %><br />
+    <%= f.text_area :item, class: :form__text, id:"nail_item" %>
+  </div>
+  <br />
+
+  <div class="field">
+    <%= f.label :thumb, "①親指" %><br />
+    <%= f.text_area :thumb, class: :form__text, id:"nail_thumb" %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "コンセプト" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_concept" %>
+    <%= f.label :index_finger, "②人差し指" %><br />
+    <%= f.text_area :index_finger, class: :form__text, id:"nail_index_finger" %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "プロトタイプの画像" %><br />
-    <%= f.file_field :hoge, id:"prototype_image" %>
+    <%= f.label :middle_finger, "③中指" %><br />
+    <%= f.text_area :middle_finger, class: :form__text, id:"nail_middle_finger" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ring_finger, "④薬指" %><br />
+    <%= f.text_area :ring_finger, class: :form__text, id:"nail_ring_finger" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :little_finger, "⑤小指" %><br />
+    <%= f.text_area :little_finger, class: :form__text, id:"nail_little_finger" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
+    <%= f.submit "投稿する", class: :form__btn  %>
   </div>
 <% end %>
