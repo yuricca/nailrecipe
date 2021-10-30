@@ -21,7 +21,7 @@ class NailsController < ApplicationController
   private
 
   def nail_params
-    params.require(:nail).permit(:title, :detail, :thumb, :index_finger, :middle_finger, :ring_finger, :little_finger, image[]).merge(user_id: current_use.id)    
+    params.require(:nail).permit(:title, :detail, :thumb, :index_finger, :middle_finger, :ring_finger, :little_finger, :image).merge(user_id: current_user.id)    
   end
 
   def move_to_index
