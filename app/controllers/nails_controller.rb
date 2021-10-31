@@ -1,6 +1,6 @@
 class NailsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
-  before_action :set_nail, only: [:show]
+  before_action :move_to_index, except: [:index, :show ]
+  before_action :set_nail, only: [:show, :edit, :update, :destroy]
 
   def index
     @nails = Nail.all
@@ -20,7 +20,24 @@ class NailsController < ApplicationController
   end
 
   def show
+
+  end
+
+  def edit
     
+  end
+
+  def update
+    if @nail.update(nail_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @nail.destroy
+    redirect_to root_path
   end
 
   private
