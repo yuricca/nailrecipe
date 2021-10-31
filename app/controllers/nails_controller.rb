@@ -1,5 +1,6 @@
 class NailsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
+  before_action :set_nail, only: [:show]
 
   def index
     @nails = Nail.all
@@ -18,6 +19,10 @@ class NailsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
   private
 
   def nail_params
@@ -28,5 +33,9 @@ class NailsController < ApplicationController
     unless user_signed_in?
       redirect_to action: :index
     end
+  end
+
+  def set_nail
+    @nail = Nail.find(params[:id])
   end
 end
