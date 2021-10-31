@@ -17,11 +17,45 @@
       <div class="nail__body">
         <div class="nail__detail">
           <p class="detail__title">デザインの詳細</p>
-          <p class="detail__message">
-            <%= @nail.detail %>
+            <%= safe_join(@nail.detail.split("\n"),tag(:br))%>
           </p>
         </div>
+        <br><br>
+
+        <% if user_signed_in? %>
+          <div class="nail__item">
+            <p class="item__title">使用したアイテム</p>
+              <%= safe_join(@nail.item.split("\n"),tag(:br))%>
+            </p>
+          </div>
+          <br><br>
+
+          <div class="nail__fingers">
+            <p class="thumb__title">①親指</p>
+              <%= safe_join(@nail.thumb.split("\n"),tag(:br))%>
+            </p>
+            <br>
+            <p class="index_finger__title">②人差し指</p>
+              <%= safe_join(@nail.index_finger.split("\n"),tag(:br))%>
+            </p>
+            <br>
+            <p class="middle_finger__title">③中指</p>
+              <%= safe_join(@nail.middle_finger.split("\n"),tag(:br))%>
+            </p>
+            <br>
+            <p class="ring_finger__title">④薬指</p>
+              <%= safe_join(@nail.ring_finger.split("\n"),tag(:br))%>
+            </p>
+            <br>
+            <p class="little_finger__title">⑤小指</p>
+              <%= safe_join(@nail.little_finger.split("\n"),tag(:br))%>
+            </p>
+            <br>
+          </div>
+        <% end %>
       </div>
+
+
       <div class="nail__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
           <%# <%= form_with model: モデル名,local: true do |f|%>
