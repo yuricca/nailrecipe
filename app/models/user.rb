@@ -5,6 +5,9 @@ class User < ApplicationRecord
   has_many :nails
   has_many :comments
 
-  validates :nickname, presence: true
+  with_options presence: true do
+    validates :nickname
+    validates :profile
+  end
 
 end

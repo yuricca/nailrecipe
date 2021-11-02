@@ -6,6 +6,7 @@ class Nail < ApplicationRecord
   with_options presence: true do
     validates :image
     validates :title
+    validates :detail
     validates :thumb
     validates :index_finger
     validates :middle_finger

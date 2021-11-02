@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_10_27_131850) do
 
   create_table "nails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.text "detail"
+    t.text "detail", null: false
     t.text "item", null: false
     t.text "thumb", null: false
     t.text "index_finger", null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_10_27_131850) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
-    t.text "profile"
+    t.text "profile", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
