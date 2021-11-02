@@ -22,8 +22,8 @@ has_many :comments
 | Column        | Type       | Options           |
 | ------------- | ------ --- | ----------------- |
 | title         | string     | null: false       |
-| detail        | text       |                   |
-| item          | text       |                   |
+| detail        | text       | null: false       |
+| item          | text       | null: false       |
 | thumb         | text       | null: false       |
 | index_finger  | text       | null: false       |
 | middle_finger | text       | null: false       |
