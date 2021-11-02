@@ -4,7 +4,7 @@
       <p class="nail__hedding">
         <%= @nail.title %>
       </p>
-      <%= link_to "by #{@nail.user.nickname}", root_path, class: :nail__user %>
+      <%= link_to "by #{@nail.user.nickname}", user_path(@nail.user.id), class: :nail__user %>
       <% if user_signed_in? && current_user.id == @nail.user_id %>
         <div class="nail__manage">
           <%= link_to "編集する", edit_nail_path, class: :nail__btn %>

@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}"%>
+      </h2>
+            <div ><%= @user.profile %></div>
+            <br><br>
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}'s Nail Gallery"%>
+      </h2>
+      <div class="user__card">
+        <%= render partial: "nails/nail", collection: @nails %>
+      </div>
+    </div>
+  </div>
+</div>
