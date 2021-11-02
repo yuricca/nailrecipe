@@ -4,7 +4,12 @@
       <h2 class="page-heading">
         <%= "#{@user.nickname}"%>
       </h2>
-            <div ><%= @user.profile %></div>
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <div class="nail__manage">
+          <%= link_to "編集する", edit_user_path(@user.id), class: :nail__btn %>
+        </div>
+      <% end %>
+            <%= safe_join(@user.profile.split("\n"),tag(:br))%>
             <br><br>
       <h2 class="page-heading">
         <%= "#{@user.nickname}'s Nail Gallery"%>
