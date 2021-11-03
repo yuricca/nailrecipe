@@ -16,7 +16,8 @@ class Nail < ApplicationRecord
   
   def self.search(search)
     if search != ""
-      Nail.where('title LIKE(?)', "%#{search}%")
+      Nail.where('title LIKE(?) OR detail LIKE(?) OR item LIKE(?) OR thumb LIKE(?) OR index_finger LIKE(?) OR ring_finger LIKE(?) OR little_finger LIKE(?)',
+                 "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
     else
       Nail.all
     end

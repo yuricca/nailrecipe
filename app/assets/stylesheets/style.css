@@ -120,10 +120,10 @@ a {
 
 /* メイン */
 
-.greeting{
+.status{
   margin-bottom: 20px;
 }
-.greeting__link{
+.status__link{
   text-decoration: underline;
 }
 .page-heading {

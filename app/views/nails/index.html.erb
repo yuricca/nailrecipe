@@ -7,9 +7,9 @@
 <main class="main">
   <div class="inner">
     <% if user_signed_in? %>
-      <div class="greeting">
+      <div class="status">
         <%= "Welcome!" %>
-        <%= link_to "#{current_user.nickname}", root_path, class: :greeting__link%>
+        <%= link_to "#{current_user.nickname}", user_path(current_user.id), class: :status__link%>
       </div>
     <% end %>
     <div class="card__wrapper">
