@@ -20,7 +20,8 @@ class NailsController < ApplicationController
   end
 
   def show
-
+    @comment = Comment.new
+    @comments = @nail.comments.includes(:user)
   end
 
   def edit

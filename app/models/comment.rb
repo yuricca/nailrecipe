@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
-  belomgs_to :nail
-  belomgs_to :user
+  belongs_to :nail
+  belongs_to :user
 
   validates :text, presence: true
 end
