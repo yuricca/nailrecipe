@@ -13,4 +13,12 @@ class Nail < ApplicationRecord
     validates :ring_finger
     validates :little_finger
   end
+  
+  def self.search(search)
+    if search != ""
+      Nail.where('title LIKE(?)', "%#{search}%")
+    else
+      Nail.all
+    end
+  end
 end
