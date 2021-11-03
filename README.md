@@ -22,8 +22,8 @@ has_many :comments
 | Column        | Type       | Options           |
 | ------------- | ------ --- | ----------------- |
 | title         | string     | null: false       |
-| detail        | text       |                   |
-| item          | text       |                   |
+| detail        | text       | null: false       |
+| item          | text       | null: false       |
 | thumb         | text       | null: false       |
 | index_finger  | text       | null: false       |
 | middle_finger | text       | null: false       |
@@ -39,11 +39,11 @@ has_one :comments
 
 ## comments テーブル
 
-| Column       | Type       | Options           |
-| ------------ | ---------- | ----------------- |
-| comment_text | string     | null: false       |
-| nail         | references | foreign_key: true |
-| user         | references | foreign_key: true |
+| Column       | Type    | Options     |
+| ------------ | --------| ----------- |
+| text         | string  | null: false |
+| nail         | integer |             |
+| user         | integer |             |
 
 ### Association
 
