@@ -1,5 +1,5 @@
 class NailsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show ]
+  before_action :move_to_index, except: [:index, :show, :search ]
   before_action :set_nail, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -25,7 +25,6 @@ class NailsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
@@ -39,6 +38,10 @@ class NailsController < ApplicationController
   def destroy
     @nail.destroy
     redirect_to root_path
+  end
+
+  def search
+    @nails = Nail.search(params[:keyword])
   end
 
   private
