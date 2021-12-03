@@ -11,4 +11,7 @@ class User < ApplicationRecord
     validates :profile
   end
 
+  def already_favorited?(nail)
+    self.favorites.exists?(nail_id: nail.id)
+  end
 end
